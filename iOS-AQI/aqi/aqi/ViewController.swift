@@ -84,6 +84,7 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate{
         
         if aqiArray != nil {
             let cell = tableView.dequeueReusableCell(withIdentifier: "aqiCell", for: indexPath) as! AqiTableViewCell
+            aqiArray?.reverse()
             cell.cityName.text = aqiArray![indexPath.row].SiteName!
             cell.aqiValue.text = aqiArray![indexPath.row].AQI!
             if cell.aqiValue.text == ""{
